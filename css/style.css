@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", "sans-serif";
+}
+
+body h4 {
+  font-family: "Shrikhand", "sans-serif";
+}
