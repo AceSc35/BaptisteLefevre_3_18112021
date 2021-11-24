@@ -1,6 +1,7 @@
 @import "libs/reset.scss";
 @import "libs/responsive.scss";
 @import "libs/variables.scss";
+@import "libs/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 
 body {
@@ -13,8 +14,11 @@ body {
 
 @media #{$medium-down} {
   body {
-    h1 {
-      @extend .h4;
-    }
+    width: 100%;
+  }
+
+  .ohmyfood-title {
+    @include flex-center;
+    margin: 20px auto;
   }
 }
