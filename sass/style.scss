@@ -1,3 +1,6 @@
+@import "libs/reset.scss";
+@import "libs/responsive.scss";
+@import "libs/variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
 
 body {
@@ -5,5 +8,13 @@ body {
 
   h4 {
     font-family: "Shrikhand", "sans-serif";
+  }
+}
+
+@media #{$medium-down} {
+  body {
+    h1 {
+      @extend .h4;
+    }
   }
 }
