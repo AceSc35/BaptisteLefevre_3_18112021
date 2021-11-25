@@ -140,4 +140,24 @@ body h4 {
     font-weight: bold;
   }
   /* Booking */
+  .booking {
+    background-color: #f2f2f2;
+    height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .booking .booking-title {
+    font-weight: bold;
+  }
 }

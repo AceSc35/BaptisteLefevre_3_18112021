@@ -51,4 +51,15 @@ body {
   }
 
   /* Booking */
+
+  .booking {
+    background-color: #f2f2f2;
+    height: 250px;
+    @include flex-evenly-center;
+    flex-direction: column;
+
+    .booking-title {
+      font-weight: bold;
+    }
+  }
 }
