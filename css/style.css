@@ -84,6 +84,9 @@ th {
 /* PC */
 /* Tablet */
 /* COLOR */
+/* FlexBox */
+/* Margin Auto */
+/* Button */
 body {
   font-family: "Roboto", "sans-serif";
 }
@@ -142,7 +145,7 @@ body h4 {
   /* Booking */
   .booking {
     background-color: #f2f2f2;
-    height: 250px;
+    height: 265px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -159,5 +162,36 @@ body h4 {
   }
   .booking .booking-title {
     font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+  }
+  .booking p {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 300;
+    position: relative;
+    top: -15px;
+  }
+  .explore-button {
+    width: 208px;
+    height: 50px;
+    position: relative;
+    bottom: 21px;
+    border-radius: 28px;
+    font-size: 14px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 1px 4px 5px 0px #c1bdbd;
+            box-shadow: 1px 4px 5px 0px #c1bdbd;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(359deg, #9536dc, #ff79da);
+  }
+  .explore-button:hover {
+    background-color: #b573e7;
+    background-blend-mode: lighten;
+    -webkit-box-shadow: 1px 6px 5px 2px #393434;
+            box-shadow: 1px 6px 5px 2px #393434;
   }
 }
