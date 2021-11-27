@@ -60,7 +60,7 @@ body {
 
     .booking-title {
       font-weight: bold;
-      font-size: 25px;
+      font-size: 24px;
       text-align: center;
     }
 
@@ -74,5 +74,70 @@ body {
   }
   .explore-button {
     @include explore-button-restaurants;
+  }
+
+  .functioning-global {
+    margin-top: 45px;
+    height: 375px;
+  }
+
+  .functioning-title {
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .functioning-choice {
+    @include flex-evenly-center;
+    flex-direction: column;
+    height: 350px;
+  }
+
+  .functioning-choice li {
+    background-color: #f6f6f6;
+    height: 60px;
+    width: 300px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: lighten($primary, 35%);
+
+      .functioning-icons {
+        color: $primary;
+      }
+    }
+
+    .step-functioning-number {
+      @include flex-center;
+      position: relative;
+      right: 9px;
+      width: 22px;
+      height: 22px;
+      border-radius: 16px;
+      background-color: $primary;
+      color: white;
+      font-size: 12px;
+    }
+
+    .functioning-icons {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #7e7e7e;
+    }
+
+    .fa-mobile-alt {
+      width: 16px;
+    }
+
+    .fa-store {
+      width: 16px;
+    }
+
+    p {
+      margin-left: 20px;
+      font-weight: bold;
+    }
   }
 }

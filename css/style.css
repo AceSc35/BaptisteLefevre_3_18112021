@@ -162,7 +162,7 @@ body h4 {
   }
   .booking .booking-title {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 24px;
     text-align: center;
   }
   .booking p {
@@ -193,5 +193,82 @@ body h4 {
     background-blend-mode: lighten;
     -webkit-box-shadow: 1px 6px 5px 2px #393434;
             box-shadow: 1px 6px 5px 2px #393434;
+  }
+  .functioning-global {
+    margin-top: 45px;
+    height: 375px;
+  }
+  .functioning-title {
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .functioning-choice {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 350px;
+  }
+  .functioning-choice li {
+    background-color: #f6f6f6;
+    height: 60px;
+    width: 300px;
+    border-radius: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .functioning-choice li:hover {
+    background-color: #e5cef6;
+  }
+  .functioning-choice li:hover .functioning-icons {
+    color: #9536dc;
+  }
+  .functioning-choice li .step-functioning-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    right: 9px;
+    width: 22px;
+    height: 22px;
+    border-radius: 16px;
+    background-color: #9536dc;
+    color: white;
+    font-size: 12px;
+  }
+  .functioning-choice li .functioning-icons {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #7e7e7e;
+  }
+  .functioning-choice li .fa-mobile-alt {
+    width: 16px;
+  }
+  .functioning-choice li .fa-store {
+    width: 16px;
+  }
+  .functioning-choice li p {
+    margin-left: 20px;
+    font-weight: bold;
   }
 }
