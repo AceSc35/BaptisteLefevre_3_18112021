@@ -12,6 +12,64 @@ body {
   }
 }
 
+.loading-spinner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  background: rgba(102, 102, 102, 0.4);
+  animation: disparition 0s ease-in 4.1s forwards;
+  -webkit-animation: disparition 0s ease-in 4.1s forwards;
+}
+
+@keyframes disparition {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@-webkit-keyframes disparition {
+  to {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+.rotate-180-cw {
+  -webkit-animation: rotate-180-cw 2s cubic-bezier(0.39, 0.575, 0.565, 1) 2
+    alternate;
+  animation: rotate-180-cw 2s cubic-bezier(0.39, 0.575, 0.565, 1) 2 alternate;
+  top: 50%;
+  margin: auto;
+  position: relative;
+  width: 100px;
+}
+
+@-webkit-keyframes rotate-180-cw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate-180-cw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
 @media #{$medium-down} {
   body {
     width: 100%;
