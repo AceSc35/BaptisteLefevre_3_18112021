@@ -1,7 +1,11 @@
-$medium: 768px !default;
-$large: 992px !default;
+$small-custom: 320px !default;
+$small-xs: 480px !default;
+$small: 768px !default;
+$medium: 992px !default;
+$large: 1200px !default;
 
-$medium-up: "only screen and (min-width: #{$medium})"; /* Tablet? */
-$medium-down: "only screen and (max-width: #{$medium})"; /* Mobile */
-$large-up: "only screen and (min-width: #{$large})"; /* PC */
-$large-down: "only screen and (max-width: #{$large})"; /* Tablet */
+$small-custom: "only screen and (min-width: #{$small-custom})";
+$small-down: "only screen and (min-width: #{$small-xs})";
+$small-up: "only screen and (min-width: #{$small})";
+$medium-up: "only screen and (min-width: #{$medium})";
+$large-up: "only screen and (min-width: #{$large})";
