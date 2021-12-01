@@ -91,7 +91,8 @@ body {
 }
 
 body h4,
-body .ohmyfood-title-page {
+body .ohmyfood-title-page,
+body .title-global-page {
   font-family: "Shrikhand", "sans-serif";
 }
 
@@ -432,12 +433,12 @@ body .ohmyfood-title-page {
   .restaurants-title {
     font-weight: 800;
   }
-  .fa-heart {
+  .heart-index, .heart-page {
     font-size: 22px;
     margin-top: 5px;
     margin-right: 30px;
   }
-  .fa-heart:hover {
+  .heart-index:hover, .heart-page:hover {
     color: #9536dc;
     font-weight: bold;
   }
@@ -485,13 +486,55 @@ body .ohmyfood-title-page {
   /* Header Page Mobile */
   .ohmyfood-title-container-page {
     width: 75%;
+    height: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  }
+  .ohmyfood-title-page {
+    font-size: 25px;
+  }
+  .fa-arrow-left {
+    color: black;
+    font-size: 17px;
+  }
+  /* Menu Page Mobile */
+  .menu-global-container {
+    background-color: red;
+    border-radius: 38px;
+    position: relative;
+    bottom: 52px;
+  }
+  .title-and-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 18px;
+  }
+  .title-global-page {
+    font-size: 25px;
+    margin-right: 25px;
+    margin-top: 9px;
+  }
+  .heart-page {
+    margin-right: 19px;
+  }
+  .title-menu {
+    text-transform: uppercase;
+  }
+  .lign {
+    width: 30px;
+    border-bottom: 3px solid #99e2d0;
   }
 }
