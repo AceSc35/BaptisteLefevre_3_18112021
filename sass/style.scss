@@ -383,7 +383,7 @@ body {
     border-bottom: 3px solid #99e2d0;
     height: 6px;
     margin-left: 1px;
-    margin-bottom: 22px;
+    margin-bottom: 13px;
   }
 
   .starters {
@@ -393,7 +393,24 @@ body {
   }
 
   .food-starter {
-    border: 2px solid black;
+    height: 60px;
+    background-color: white;
+    border-radius: 14px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 14px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
   }
 
   .detail-food {
