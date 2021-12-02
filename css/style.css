@@ -506,7 +506,7 @@ body .title-global-page {
   /* Menu Page Mobile */
   .menu-global-container {
     background-color: red;
-    border-radius: 38px;
+    border-radius: 38px 38px 0 0;
     position: relative;
     bottom: 52px;
   }
@@ -524,17 +524,49 @@ body .title-global-page {
   }
   .title-global-page {
     font-size: 25px;
-    margin-right: 25px;
+    margin-right: 56px;
     margin-top: 9px;
   }
   .heart-page {
     margin-right: 19px;
   }
+  .three-menu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 92%;
+  }
   .title-menu {
     text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
   }
   .lign {
-    width: 30px;
+    width: 35px;
     border-bottom: 3px solid #99e2d0;
+    height: 6px;
+    margin-left: 1px;
+    margin-bottom: 22px;
+  }
+  .starters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .food-starter {
+    border: 2px solid black;
+  }
+  .detail-food {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }

@@ -346,7 +346,7 @@ body {
 
   .menu-global-container {
     background-color: red;
-    border-radius: 38px;
+    border-radius: 38px 38px 0 0;
     position: relative;
     bottom: 52px;
   }
@@ -358,7 +358,7 @@ body {
 
   .title-global-page {
     font-size: 25px;
-    margin-right: 25px;
+    margin-right: 56px;
     margin-top: 9px;
   }
 
@@ -367,11 +367,37 @@ body {
     margin-right: 19px;
   }
 
+  .three-menu {
+    @include marginlr-auto;
+    margin-top: 20px;
+    width: 92%;
+  }
+
   .title-menu {
     text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
   }
   .lign {
-    width: 30px;
+    width: 35px;
     border-bottom: 3px solid #99e2d0;
+    height: 6px;
+    margin-left: 1px;
+    margin-bottom: 22px;
+  }
+
+  .starters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .food-starter {
+    border: 2px solid black;
+  }
+
+  .detail-food {
+    display: flex;
+    justify-content: space-between;
   }
 }
