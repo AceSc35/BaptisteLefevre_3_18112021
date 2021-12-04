@@ -8,6 +8,7 @@
             transform: rotate(360deg);
   }
 }
+
 @keyframes rotation-icons {
   from {
     -webkit-transform: rotate(0deg);
@@ -16,5 +17,23 @@
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes progressive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progressive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

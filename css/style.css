@@ -107,6 +107,24 @@ th {
   }
 }
 
+@-webkit-keyframes progressive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progressive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: "Roboto", "sans-serif";
   width: 100%;
@@ -579,6 +597,27 @@ body .title-global-page {
     margin-bottom: 13px;
   }
   /* STEP MENU Mobile */
+  /*.title-menu,
+  .food-starter,
+  .lign {
+    animation-name: progressive;
+    animation-duration: 4s;
+  }
+
+  .title-menu,
+  .food-dish,
+  .lign {
+    animation-name: progressive;
+    animation-duration: 8s;
+  }
+
+  .title-menu,
+  .food-dessert,
+  .lign {
+    animation-name: progressive;
+    animation-duration: 12s;
+  } */
+  /* Se Servir de NTH:child */
   .desserts,
   .dishes,
   .starters {
@@ -603,8 +642,8 @@ body .title-global-page {
     display: block;
     position: relative;
     overflow: hidden;
-    -webkit-transition: padding-right 300ms linear;
-    transition: padding-right 300ms linear;
+    -webkit-transition: padding-right 400ms linear;
+    transition: padding-right 400ms linear;
   }
   .food-dessert:hover,
   .food-dish:hover,
@@ -621,8 +660,8 @@ body .title-global-page {
   .food-dessert:hover .fa-check-circle,
   .food-dish:hover .fa-check-circle,
   .food-starter:hover .fa-check-circle {
-    -webkit-animation: rotation-icons 400ms linear;
-            animation: rotation-icons 400ms linear;
+    -webkit-animation: rotation-icons 450ms linear;
+            animation: rotation-icons 450ms linear;
   }
   .food-dessert .validation-container,
   .food-dish .validation-container,
@@ -644,10 +683,10 @@ body .title-global-page {
     right: -60px;
     border-radius: 0 14px 14px 0;
     margin-top: -52px;
-    -webkit-transition: -webkit-transform 300ms linear;
-    transition: -webkit-transform 300ms linear;
-    transition: transform 300ms linear;
-    transition: transform 300ms linear, -webkit-transform 300ms linear;
+    -webkit-transition: -webkit-transform 400ms linear;
+    transition: -webkit-transform 400ms linear;
+    transition: transform 400ms linear;
+    transition: transform 400ms linear, -webkit-transform 400ms linear;
   }
   .food-dessert .validation-container .fa-check-circle,
   .food-dish .validation-container .fa-check-circle,

@@ -401,6 +401,29 @@ body {
 
   /* STEP MENU Mobile */
 
+  /*.title-menu,
+  .food-starter,
+  .lign {
+    animation-name: progressive;
+    animation-duration: 4s;
+  }
+
+  .title-menu,
+  .food-dish,
+  .lign {
+    animation-name: progressive;
+    animation-duration: 8s;
+  }
+
+  .title-menu,
+  .food-dessert,
+  .lign {
+    animation-name: progressive;
+    animation-duration: 12s;
+  } */
+
+  /* Se Servir de NTH:child */
+
   .desserts,
   .dishes,
   .starters {
@@ -420,7 +443,7 @@ body {
     display: block;
     position: relative;
     overflow: hidden;
-    transition: padding-right 300ms linear;
+    transition: padding-right 400ms linear;
 
     &:hover {
       padding-right: 75px;
@@ -432,7 +455,7 @@ body {
     }
 
     &:hover .fa-check-circle {
-      animation: rotation-icons 400ms linear;
+      animation: rotation-icons 450ms linear;
     }
 
     .validation-container {
@@ -447,7 +470,7 @@ body {
       right: -60px;
       border-radius: 0 14px 14px 0;
       margin-top: -52px;
-      transition: transform 300ms linear;
+      transition: transform 400ms linear;
 
       .fa-check-circle {
         color: white;
