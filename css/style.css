@@ -86,8 +86,30 @@ th {
 /* Button */
 /* Index group title */
 /* Restaurants Index & Img */
+@-webkit-keyframes rotation-icons {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotation-icons {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body {
   font-family: "Roboto", "sans-serif";
+  width: 100%;
 }
 
 body h4,
@@ -202,9 +224,9 @@ body .title-global-page {
     margin-right: 33px;
     font-weight: bold;
   }
-  /* Booking Index Mobile*/
+  /* Booking Index Mobile */
   .booking {
-    background-color: #f6f6f6;
+    background-color: #f2f2f2;
     height: 265px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -282,7 +304,7 @@ body .title-global-page {
     padding-bottom: 48px;
   }
   .functioning-choice li {
-    background-color: #f6f6f6;
+    background-color: #f2f2f2;
     height: 60px;
     width: 320px;
     border-radius: 16px;
@@ -337,7 +359,7 @@ body .title-global-page {
   }
   /* Restaurants Index Mobile */
   .restaurants {
-    background-color: #f6f6f6;
+    background-color: #f2f2f2;
     padding-bottom: 28px;
   }
   .restaurants a {
@@ -468,7 +490,7 @@ body .title-global-page {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 120px;
-    gap: 8px;
+    gap: 5px;
   }
   .fa-hands-helping,
   .fa-utensils {
@@ -504,11 +526,16 @@ body .title-global-page {
     font-size: 17px;
   }
   /* Menu Page Mobile */
+  .menu {
+    background-color: #f2f2f2;
+  }
   .menu-global-container {
-    background-color: red;
+    background-color: #f2f2f2;
     border-radius: 38px 38px 0 0;
     position: relative;
     bottom: 52px;
+    height: 953px;
+    width: 100%;
   }
   .title-and-icon {
     display: -webkit-box;
@@ -536,6 +563,9 @@ body .title-global-page {
     margin-top: 20px;
     width: 92%;
   }
+  .menu-container {
+    margin-bottom: 20px;
+  }
   .title-menu {
     text-transform: uppercase;
     font-size: 14px;
@@ -548,6 +578,9 @@ body .title-global-page {
     margin-left: 1px;
     margin-bottom: 13px;
   }
+  /* STEP MENU Mobile */
+  .desserts,
+  .dishes,
   .starters {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -558,30 +591,90 @@ body .title-global-page {
             flex-direction: column;
     gap: 15px;
   }
+  .food-dessert,
+  .food-dish,
   .food-starter {
     height: 60px;
     background-color: white;
     border-radius: 14px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding: 10px;
+    -webkit-box-shadow: 1px 2px 8px 2px #c4c4c4;
+            box-shadow: 1px 2px 8px 2px #c4c4c4;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: padding-right 300ms linear;
+    transition: padding-right 300ms linear;
+  }
+  .food-dessert:hover,
+  .food-dish:hover,
+  .food-starter:hover {
+    padding-right: 75px;
+  }
+  .food-dessert:hover .validation-container,
+  .food-dish:hover .validation-container,
+  .food-starter:hover .validation-container {
+    opacity: 1;
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+  .food-dessert:hover .fa-check-circle,
+  .food-dish:hover .fa-check-circle,
+  .food-starter:hover .fa-check-circle {
+    -webkit-animation: rotation-icons 400ms linear;
+            animation: rotation-icons 400ms linear;
+  }
+  .food-dessert .validation-container,
+  .food-dish .validation-container,
+  .food-starter .validation-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    padding-left: 10px;
-    padding-right: 14px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #99e2d0;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    opacity: 0;
+    right: -60px;
+    border-radius: 0 14px 14px 0;
+    margin-top: -52px;
+    -webkit-transition: -webkit-transform 300ms linear;
+    transition: -webkit-transform 300ms linear;
+    transition: transform 300ms linear;
+    transition: transform 300ms linear, -webkit-transform 300ms linear;
   }
+  .food-dessert .validation-container .fa-check-circle,
+  .food-dish .validation-container .fa-check-circle,
+  .food-starter .validation-container .fa-check-circle {
+    color: white;
+    font-size: 19px;
+  }
+  .food-dessert h3,
+  .food-dish h3,
   .food-starter h3 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
+    margin-bottom: 5px;
   }
+  .food-dessert p,
+  .food-dish p,
   .food-starter p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .food-dessert .price,
+  .food-dish .price,
+  .food-starter .price {
+    font-weight: bold;
+    font-size: 14px;
   }
   .detail-food {
     display: -webkit-box;
@@ -590,5 +683,31 @@ body .title-global-page {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    white-space: nowrap;
+  }
+  /* Button-order */
+  .order-button {
+    width: 180px;
+    height: 48px;
+    position: relative;
+    bottom: -20px;
+    border-radius: 28px;
+    font-size: 14px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 1px 4px 5px 0px #c1bdbd;
+            box-shadow: 1px 4px 5px 0px #c1bdbd;
+    border: none;
+    background: linear-gradient(359deg, #9536dc, #ff79da);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

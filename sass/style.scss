@@ -2,10 +2,12 @@
 @import "libs/responsive.scss";
 @import "libs/variables.scss";
 @import "libs/mixins.scss";
+@import "libs/animations.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 
 body {
   font-family: "Roboto", "sans-serif";
+  width: 100%;
 
   h4,
   .ohmyfood-title-page,
@@ -113,10 +115,10 @@ body {
     }
   }
 
-  /* Booking Index Mobile*/
+  /* Booking Index Mobile */
 
   .booking {
-    background-color: #f6f6f6;
+    background-color: $background-grey;
     height: 265px;
     @include flex-evenly-center;
     flex-direction: column;
@@ -157,7 +159,7 @@ body {
   }
 
   .functioning-choice li {
-    background-color: #f6f6f6;
+    background-color: $background-grey;
     height: 60px;
     width: 320px;
     border-radius: 16px;
@@ -208,7 +210,7 @@ body {
   /* Restaurants Index Mobile */
 
   .restaurants {
-    background-color: #f6f6f6;
+    background-color: $background-grey;
     padding-bottom: 28px;
 
     a {
@@ -305,7 +307,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 120px;
-    gap: 8px;
+    gap: 5px;
   }
 
   .fa-hands-helping,
@@ -344,11 +346,17 @@ body {
 
   /* Menu Page Mobile */
 
+  .menu {
+    background-color: $background-grey;
+  }
+
   .menu-global-container {
-    background-color: red;
+    background-color: $background-grey;
     border-radius: 38px 38px 0 0;
     position: relative;
     bottom: 52px;
+    height: 953px;
+    width: 100%;
   }
 
   .title-and-icon {
@@ -373,48 +381,109 @@ body {
     width: 92%;
   }
 
+  .menu-container {
+    margin-bottom: 20px;
+  }
+
   .title-menu {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
   }
+
   .lign {
     width: 35px;
-    border-bottom: 3px solid #99e2d0;
+    border-bottom: 3px solid $tertiary;
     height: 6px;
     margin-left: 1px;
     margin-bottom: 13px;
   }
 
+  /* STEP MENU Mobile */
+
+  .desserts,
+  .dishes,
   .starters {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
 
+  .food-dessert,
+  .food-dish,
   .food-starter {
     height: 60px;
     background-color: white;
     border-radius: 14px;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 10px;
-    padding-right: 14px;
+    padding: 10px;
+    box-shadow: 1px 2px 8px 2px #c4c4c4;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: padding-right 300ms linear;
+
+    &:hover {
+      padding-right: 75px;
+    }
+
+    &:hover .validation-container {
+      opacity: 1;
+      transform: translateX(-60px);
+    }
+
+    &:hover .fa-check-circle {
+      animation: rotation-icons 400ms linear;
+    }
+
+    .validation-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #99e2d0;
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      opacity: 0;
+      right: -60px;
+      border-radius: 0 14px 14px 0;
+      margin-top: -52px;
+      transition: transform 300ms linear;
+
+      .fa-check-circle {
+        color: white;
+        font-size: 19px;
+      }
+    }
 
     h3 {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
+      margin-bottom: 5px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 300;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 14px;
     }
   }
 
   .detail-food {
     display: flex;
     justify-content: space-between;
+    white-space: nowrap;
+  }
+
+  /* Button-order */
+
+  .order-button {
+    @include order-button;
+    @include flex-center;
   }
 }
