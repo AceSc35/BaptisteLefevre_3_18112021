@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 html,
@@ -522,7 +521,7 @@ body .title-global-page {
   .step-footer-second {
     font-weight: bold;
   }
-  /* La palette du goût Page Mobile */
+  /* Pages Mobile */
   /* Header Page Mobile */
   .ohmyfood-title-container-page {
     width: 75%;
@@ -546,26 +545,34 @@ body .title-global-page {
   /* Menu Page Mobile */
   .menu {
     background-color: #f2f2f2;
+    padding-bottom: 15px;
+  }
+  .img-note-enchantee-page {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .menu-global-container {
     background-color: #f2f2f2;
     border-radius: 38px 38px 0 0;
     position: relative;
     bottom: 52px;
-    height: 953px;
+    max-height: 1100px;
     width: 100%;
   }
   .title-and-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     padding-top: 18px;
+    margin-left: 16px;
   }
   .title-global-page {
     font-size: 25px;
@@ -573,7 +580,7 @@ body .title-global-page {
     margin-top: 9px;
   }
   .heart-page {
-    margin-right: 19px;
+    margin-right: 35px;
   }
   .three-menu {
     margin-left: auto;
@@ -584,7 +591,9 @@ body .title-global-page {
   .menu-container {
     margin-bottom: 20px;
   }
-  .title-menu {
+  .title-starters,
+  .title-dishes,
+  .title-desserts {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
@@ -596,28 +605,31 @@ body .title-global-page {
     margin-left: 1px;
     margin-bottom: 13px;
   }
-  /* STEP MENU Mobile */
-  /*.title-menu,
+  /* STEP MENU Page Mobile */
+  .title-starters,
   .food-starter,
   .lign {
-    animation-name: progressive;
-    animation-duration: 4s;
+    -webkit-animation-name: progressive;
+            animation-name: progressive;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
-
-  .title-menu,
+  .title-dishes,
   .food-dish,
   .lign {
-    animation-name: progressive;
-    animation-duration: 8s;
+    -webkit-animation-name: progressive;
+            animation-name: progressive;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
   }
-
-  .title-menu,
+  .title-desserts,
   .food-dessert,
   .lign {
-    animation-name: progressive;
-    animation-duration: 12s;
-  } */
-  /* Se Servir de NTH:child */
+    -webkit-animation-name: progressive;
+            animation-name: progressive;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+  }
   .desserts,
   .dishes,
   .starters {
@@ -700,6 +712,9 @@ body .title-global-page {
     font-size: 17px;
     font-weight: 800;
     margin-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .food-dessert p,
   .food-dish p,
@@ -726,6 +741,15 @@ body .title-global-page {
   }
   /* Button-order */
   .order-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 180px;
     height: 48px;
     position: relative;
@@ -739,14 +763,11 @@ body .title-global-page {
             box-shadow: 1px 4px 5px 0px #c1bdbd;
     border: none;
     background: linear-gradient(359deg, #9536dc, #ff79da);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  }
+  .order-button:hover {
+    background-color: #b573e7;
+    background-blend-mode: lighten;
+    -webkit-box-shadow: 1px 6px 5px 2px #393434;
+            box-shadow: 1px 6px 5px 2px #393434;
   }
 }
