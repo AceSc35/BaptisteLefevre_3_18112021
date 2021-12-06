@@ -96,7 +96,7 @@
   font-size: 24px;
 }
 
-/* Restaurants Index & Img */
+/* Restaurants Index & Img Mobile */
 
 @mixin img-la-palette-du-gout {
   background-image: url("../images/restaurants/palette-du-gout.jpg");
@@ -140,4 +140,72 @@
   background-color: white;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+/* Page menu */
+
+@mixin step-menu-page {
+  height: 60px;
+  background-color: white;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 1px 2px 8px 2px #c4c4c4;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: padding-right 400ms linear;
+
+  &:hover {
+    padding-right: 75px;
+  }
+
+  &:hover .validation-container {
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+
+  &:hover .fa-check-circle {
+    animation: rotation-icons 800ms linear;
+  }
+
+  .validation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    opacity: 0;
+    right: -60px;
+    border-radius: 0 14px 14px 0;
+    margin-top: -52px;
+    transition: transform 400ms linear;
+
+    .fa-check-circle {
+      color: white;
+      font-size: 19px;
+    }
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .price {
+    font-weight: bold;
+    font-size: 14px;
+  }
 }

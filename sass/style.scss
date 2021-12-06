@@ -193,10 +193,7 @@ body {
       color: #7e7e7e;
     }
 
-    .fa-mobile-alt {
-      width: 16px;
-    }
-
+    .fa-mobile-alt,
     .fa-store {
       width: 16px;
     }
@@ -282,12 +279,12 @@ body {
     }
   }
 
-  /* Footer Index Mobile */
+  /* Footer Index-Pages Mobile */
 
   .footer-global {
     background-color: #353535;
     color: white;
-    height: 185px;
+    height: 183px;
     padding-left: 15px;
 
     h4 {
@@ -443,69 +440,7 @@ body {
   .food-dessert,
   .food-dish,
   .food-starter {
-    height: 60px;
-    background-color: white;
-    border-radius: 14px;
-    padding: 10px;
-    box-shadow: 1px 2px 8px 2px #c4c4c4;
-    display: block;
-    position: relative;
-    overflow: hidden;
-    transition: padding-right 400ms linear;
-
-    &:hover {
-      padding-right: 75px;
-    }
-
-    &:hover .validation-container {
-      opacity: 1;
-      transform: translateX(-60px);
-    }
-
-    &:hover .fa-check-circle {
-      animation: rotation-icons 450ms linear;
-    }
-
-    .validation-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #99e2d0;
-      height: 60px;
-      width: 60px;
-      position: absolute;
-      opacity: 0;
-      right: -60px;
-      border-radius: 0 14px 14px 0;
-      margin-top: -52px;
-      transition: transform 400ms linear;
-
-      .fa-check-circle {
-        color: white;
-        font-size: 19px;
-      }
-    }
-
-    h3 {
-      font-size: 17px;
-      font-weight: 800;
-      margin-bottom: 5px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    p {
-      font-size: 13px;
-      font-weight: 300;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-
-    .price {
-      font-weight: bold;
-      font-size: 14px;
-    }
+    @include step-menu-page;
   }
 
   .detail-food {
@@ -514,10 +449,111 @@ body {
     white-space: nowrap;
   }
 
-  /* Button-order */
+  /* Button order Page Mobile */
 
   .order-button {
     @include flex-center;
     @include order-button;
+  }
+}
+
+@media #{$small-up} {
+  /* Tablet version */
+
+  /* Booking Index Tablet */
+
+  .booking br {
+    display: none;
+  }
+
+  .booking .booking-title {
+    font-size: 26px;
+  }
+
+  .booking p {
+    font-size: 21px;
+  }
+
+  /* Functioning Index Tablet */
+
+  .functioning-global {
+    margin-top: 40px;
+    height: 370px;
+  }
+
+  .functioning-title {
+    margin-left: 40px;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .functioning-choice {
+    height: 358px;
+    gap: 30px;
+    padding-bottom: 60px;
+  }
+
+  .functioning-choice li {
+    width: 85%;
+    height: 65px;
+
+    .functioning-icons {
+      font-size: 20px;
+    }
+
+    .fa-mobile-alt {
+      width: 19px;
+    }
+
+    .fa-store {
+      width: 20px;
+    }
+  }
+
+  .functioning-choice p {
+    font-size: 19px;
+  }
+
+  .step-functioning-number {
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  /* Restaurants Index Tablet */
+
+  .restaurants-global-title {
+    margin-left: 40px;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .palette-du-gout,
+  .note-enchantee,
+  .a-la-francaise,
+  .delice-des-sens {
+    width: 86%;
+    height: 250px;
+  }
+
+  .img-palette-du-gout {
+    background-position: center;
+    height: 180px;
+  }
+
+  .img-note-enchantee {
+    background-position: top -121px left 0px;
+    height: 180px;
+  }
+
+  .img-la-francaise {
+    background-position: top -199px left 0px;
+    height: 180px;
+  }
+
+  .img-delice-des-sens {
+    background-position: bottom -80px left 0px;
+    height: 180px;
   }
 }
