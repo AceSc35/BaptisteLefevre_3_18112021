@@ -125,6 +125,152 @@ th {
   }
 }
 
+/* Animation Loading */
+@-webkit-keyframes restaurant-loader-pot {
+  from,
+  45%,
+  55%,
+  65%,
+  75%,
+  80%,
+  85%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  45% {
+    -webkit-transform: translate3d(-4%, -13%, 0) rotate(-13deg);
+            transform: translate3d(-4%, -13%, 0) rotate(-13deg);
+  }
+  55% {
+    -webkit-transform: translate3d(1%, -2%, 0) rotate(6deg);
+            transform: translate3d(1%, -2%, 0) rotate(6deg);
+  }
+  65% {
+    -webkit-transform: translate3d(-2%, -4%, 0) rotate(-3deg);
+            transform: translate3d(-2%, -4%, 0) rotate(-3deg);
+  }
+  75% {
+    -webkit-transform: translate3d(2%, 3%, 0) rotate(3deg);
+            transform: translate3d(2%, 3%, 0) rotate(3deg);
+  }
+  80% {
+    -webkit-transform: translate3d(-2%, 1%, 0) rotate(-2deg);
+            transform: translate3d(-2%, 1%, 0) rotate(-2deg);
+  }
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes restaurant-loader-pot {
+  from,
+  45%,
+  55%,
+  65%,
+  75%,
+  80%,
+  85%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  45% {
+    -webkit-transform: translate3d(-4%, -13%, 0) rotate(-13deg);
+            transform: translate3d(-4%, -13%, 0) rotate(-13deg);
+  }
+  55% {
+    -webkit-transform: translate3d(1%, -2%, 0) rotate(6deg);
+            transform: translate3d(1%, -2%, 0) rotate(6deg);
+  }
+  65% {
+    -webkit-transform: translate3d(-2%, -4%, 0) rotate(-3deg);
+            transform: translate3d(-2%, -4%, 0) rotate(-3deg);
+  }
+  75% {
+    -webkit-transform: translate3d(2%, 3%, 0) rotate(3deg);
+            transform: translate3d(2%, 3%, 0) rotate(3deg);
+  }
+  80% {
+    -webkit-transform: translate3d(-2%, 1%, 0) rotate(-2deg);
+            transform: translate3d(-2%, 1%, 0) rotate(-2deg);
+  }
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes restaurant-loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes restaurant-loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes disparition {
+  0% {
+    opacity: 1;
+    background-color: #818181;
+  }
+  100% {
+    opacity: 0;
+    background-color: unset;
+  }
+}
+
+@keyframes disparition {
+  0% {
+    opacity: 1;
+    background-color: #818181;
+  }
+  100% {
+    opacity: 0;
+    background-color: unset;
+  }
+}
+
+@-webkit-keyframes disparition-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes disparition-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 body {
   font-family: "Roboto", "sans-serif";
   width: 100%;
@@ -137,64 +283,92 @@ body .title-global-page {
 }
 
 /* Loading page */
-/*
-.loading-spinner {
+.restaurants-loader-global {
   width: 100%;
   height: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+  -webkit-animation: disparition 4s linear;
+          animation: disparition 4s linear;
+}
+
+.restaurants-loader-global .restaurant-loader {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  padding: 2%;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-animation: disparition-spinner 2s linear 2s forwards;
+          animation: disparition-spinner 2s linear 2s forwards;
+}
+
+.restaurants-loader-global .restaurant-loader .restaurant-loader-inner {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: restaurant-loader-spin 2s linear infinite;
+          animation: restaurant-loader-spin 2s linear infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   top: 0;
-  z-index: 9999;
-  background: rgba(102, 102, 102, 0.4);
-  animation: disparition 0s ease-in 4.1s forwards;
-  -webkit-animation: disparition 0s ease-in 4.1s forwards;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border: 3px solid transparent;
+  border-right-color: #9536dc;
+  border-left-color: #9536dc;
+  border-radius: 50%;
+  content: "";
 }
 
-@keyframes disparition {
-  to {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-}
-
-@-webkit-keyframes disparition {
-  to {
-    width: 0;
-    height: 0;
-    display: none;
-  }
-}
-
-.rotate-180-cw {
-  -webkit-animation: rotate-180-cw 2s cubic-bezier(0.39, 0.575, 0.565, 1) 2
-    alternate;
-  animation: rotate-180-cw 2s cubic-bezier(0.39, 0.575, 0.565, 1) 2 alternate;
-  top: 50%;
-  margin: auto;
-  position: relative;
+.up-pan {
+  background-image: url(../../images/Loading_Spinner/Nc4xNES2.png);
+  height: 25.3px;
   width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: restaurant-loader-pot;
+          animation-name: restaurant-loader-pot;
 }
 
-@-webkit-keyframes rotate-180-cw {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
+.down-pan {
+  background-image: url(../../images/Loading_Spinner/lNXd2Lr.png);
+  height: 50px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  right: 18px;
+  bottom: 35px;
 }
-@keyframes rotate-180-cw {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-*/
+
+/* Responsive */
 @media only screen and (min-width: 320px) {
   body {
     width: 100%;
@@ -210,7 +384,8 @@ body .title-global-page {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 22px auto 9px auto;
+    padding-top: 22px;
+    padding-bottom: 9px;
     width: 100%;
   }
   .logo-ohmyfood {
@@ -849,4 +1024,5 @@ body .title-global-page {
     background-position: bottom -80px left 0px;
     height: 180px;
   }
+  /* Pages Tablet */
 }

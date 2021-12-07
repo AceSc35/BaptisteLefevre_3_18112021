@@ -209,3 +209,31 @@
     font-size: 14px;
   }
 }
+
+@mixin up-pan-img {
+  background-image: url(../../images/Loading_Spinner/Nc4xNES2.png);
+  height: 25.3px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-name: restaurant-loader-pot;
+}
+
+@mixin down-pan-img {
+  background-image: url(../../images/Loading_Spinner/lNXd2Lr.png);
+  height: 50px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  right: 18px;
+  bottom: 35px;
+}
