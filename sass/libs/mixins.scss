@@ -211,7 +211,7 @@
 }
 
 @mixin up-pan-img {
-  background-image: url("/images/loading_spinner/couvercle.png");
+  background-image: url("../../images/loading_spinner/couvercle.png");
   height: 25.3px;
   width: 100px;
   background-repeat: no-repeat;
@@ -227,7 +227,7 @@
 }
 
 @mixin down-pan-img {
-  background-image: url("/images/loading_spinner/marmite.png");
+  background-image: url("../../images/loading_spinner/marmite.png");
   height: 50px;
   width: 100px;
   background-repeat: no-repeat;
