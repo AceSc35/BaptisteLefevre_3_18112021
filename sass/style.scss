@@ -42,7 +42,7 @@ body {
   @include down-pan-img;
 }
 
-/* Responsive */
+/* Mobile version min 320px */
 
 @media #{$small-custom} {
   body {
@@ -424,9 +424,9 @@ body {
   }
 }
 
-@media #{$small-up} {
-  /* Tablet version */
+/* Tablet version min 768px*/
 
+@media #{$small-up} {
   /* Booking Index Tablet */
 
   .booking br {
@@ -528,6 +528,19 @@ body {
 
   /* Header Page Tablet */
 
+  .ohmyfood-title-container-page {
+    width: 71%;
+  }
+
+  .fa-arrow-left {
+    font-size: 24px;
+    padding-top: 3px;
+  }
+
+  .ohmyfood-title-page {
+    font-size: 28px;
+  }
+
   /* Menu Page Tablet */
 
   .title-global-page {
@@ -552,9 +565,19 @@ body {
     height: 7px;
     width: 37px;
   }
+
+  /* Pages Menu Tablet */
+
+  .img-note-enchantee-page {
+    height: 523px;
+  }
 }
 
-/* Other Responsive */
+/* PC version min 992px */
+@media #{$medium} {
+}
+
+/* Other Responsive version - min 480px */
 
 @media #{$small-down} {
   .booking p {
