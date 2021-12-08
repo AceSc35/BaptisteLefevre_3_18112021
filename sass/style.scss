@@ -8,6 +8,7 @@
 body {
   font-family: "Roboto", "sans-serif";
   width: 100%;
+  margin: 0, auto;
 
   h4,
   .ohmyfood-title-page,
@@ -98,7 +99,7 @@ body {
 
     p {
       text-align: center;
-      font-size: 19px;
+      font-size: 17px;
       font-weight: 300;
       position: relative;
       top: -15px;
@@ -128,7 +129,7 @@ body {
   .functioning-choice li {
     background-color: $background-grey;
     height: 60px;
-    width: 320px;
+    width: 292px;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -251,7 +252,7 @@ body {
   .footer-global {
     background-color: #353535;
     color: white;
-    height: 183px;
+    height: 182px;
     padding-left: 15px;
 
     h4 {
@@ -294,7 +295,7 @@ body {
   /* Header Page Mobile */
 
   .ohmyfood-title-container-page {
-    width: 75%;
+    width: 77%;
     height: 60px;
     @include flex-around-center;
   }
@@ -333,18 +334,17 @@ body {
   .title-and-icon {
     @include flex-between-center;
     padding-top: 18px;
-    margin-left: 16px;
   }
 
   .title-global-page {
-    font-size: 25px;
-    margin-right: 56px;
+    font-size: 21px;
     margin-top: 9px;
+    margin-left: 16px;
   }
 
   .heart-page {
     @extend .heart-index;
-    margin-right: 35px;
+    margin-right: 30px;
   }
 
   .three-menu {
@@ -525,4 +525,83 @@ body {
   }
 
   /* Pages Tablet */
+
+  /* Header Page Tablet */
+
+  /* Menu Page Tablet */
+
+  .title-global-page {
+    margin-left: 31px;
+    font-size: 23px;
+  }
+
+  .heart-page {
+    margin-right: 54px;
+    font-size: 26px;
+  }
+
+  /* STEP MENU Page Tablet */
+
+  .title-starters,
+  .title-dishes,
+  .title-desserts {
+    font-size: 15px;
+  }
+
+  .lign {
+    height: 7px;
+    width: 37px;
+  }
+}
+
+/* Other Responsive */
+
+@media #{$small-down} {
+  .booking p {
+    font-size: 19px;
+  }
+  .title-global-page {
+    margin-left: 19px;
+  }
+
+  .functioning-choice li {
+    width: 85%;
+    height: 65px;
+  }
+
+  .step-functioning-number {
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .palette-du-gout,
+  .note-enchantee,
+  .a-la-francaise,
+  .delice-des-sens {
+    width: 86%;
+    height: 250px;
+  }
+
+  .img-palette-du-gout {
+    background-position: center;
+    height: 180px;
+  }
+
+  .img-note-enchantee {
+    background-position: top -24px left 0px;
+    height: 180px;
+  }
+
+  .img-la-francaise {
+    background-position: top -93px left 0px;
+    height: 180px;
+    background-repeat: no-repeat;
+  }
+
+  .img-delice-des-sens {
+    background-position: bottom -20px left 0px;
+    height: 180px;
+  }
 }
