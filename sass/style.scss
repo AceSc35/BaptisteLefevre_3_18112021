@@ -573,15 +573,73 @@ body {
   }
 }
 
+/* PC version min 992px */
+
+@media #{$medium-up} {
+  /* Restaurants Index - PC */
+
+  .restaurants-global {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .palette-du-gout,
+  .note-enchantee,
+  .a-la-francaise,
+  .delice-des-sens {
+    width: 350px;
+  }
+
+  .img-note-enchantee,
+  .img-la-francaise,
+  .img-delice-des-sens {
+    background-position: center;
+  }
+
+  /* Footer Index-page - PC */
+
+  .footer-global {
+    height: 188px;
+  }
+
+  .footer-global h4 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .footer-index {
+    align-items: center;
+    gap: 9px;
+  }
+
+  .fa-utensils,
+  .fa-hands-helping {
+    font-size: unset;
+  }
+
+  .footer-index li:nth-child(1) {
+    margin-right: 10px;
+  }
+
+  .footer-index li:nth-child(2) {
+    margin-right: 25px;
+  }
+
+  .footer-index li:nth-child(3) {
+    margin-right: -6px;
+  }
+}
+
 /* Other Responsive version - min 480px */
 
 @media #{$small-down} {
+  /* Booking Index - 480px */
+
   .booking p {
     font-size: 19px;
   }
-  .title-global-page {
-    margin-left: 19px;
-  }
+
+  /* Functioning Index - 480px */
 
   .functioning-choice li {
     width: 85%;
@@ -594,6 +652,8 @@ body {
     height: 24px;
     font-size: 14px;
   }
+
+  /* Restaurants Index - 480px */
 
   .palette-du-gout,
   .note-enchantee,
@@ -622,5 +682,11 @@ body {
   .img-delice-des-sens {
     background-position: bottom -20px left 0px;
     height: 180px;
+  }
+
+  /* Menu page - 480px */
+
+  .title-global-page {
+    margin-left: 19px;
   }
 }
