@@ -873,11 +873,11 @@ body .title-global-page {
         -ms-flex-align: center;
             align-items: center;
     background-color: #99e2d0;
-    height: 62px;
+    height: 67px;
     width: 60px;
     position: absolute;
     opacity: 0;
-    right: -60px;
+    right: -58px;
     border-radius: 0 14px 14px 0;
     margin-top: -52px;
     -webkit-transition: -webkit-transform 400ms linear;
