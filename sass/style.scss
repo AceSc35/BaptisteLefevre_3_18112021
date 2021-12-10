@@ -633,7 +633,7 @@ body {
   .note-enchantee,
   .a-la-francaise,
   .delice-des-sens {
-    width: 350px;
+    width: 40%;
   }
 
   .img-la-francaise,
@@ -689,5 +689,18 @@ body {
   .img-note-enchantee-page,
   .img-palette-gout-page {
     height: 365px;
+  }
+}
+
+/* PC version min-1200px */
+
+@media #{$large-up} {
+  .fa-arrow-left {
+    left: -760px;
+  }
+
+  .img-delice-des-sens,
+  .img-la-francaise {
+    background-position: top 72% left 0%;
   }
 }

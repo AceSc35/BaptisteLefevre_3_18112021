@@ -1132,7 +1132,7 @@ body .title-global-page {
   .note-enchantee,
   .a-la-francaise,
   .delice-des-sens {
-    width: 350px;
+    width: 40%;
   }
   .img-la-francaise,
   .img-delice-des-sens {
@@ -1176,5 +1176,16 @@ body .title-global-page {
   .img-note-enchantee-page,
   .img-palette-gout-page {
     height: 365px;
+  }
+}
+
+/* PC version min-1200px */
+@media only screen and (min-width: 1200px) {
+  .fa-arrow-left {
+    left: -760px;
+  }
+  .img-delice-des-sens,
+  .img-la-francaise {
+    background-position: top 72% left 0%;
   }
 }
