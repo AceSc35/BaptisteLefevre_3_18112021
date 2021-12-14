@@ -1182,7 +1182,7 @@ body .title-global-page {
 /* PC version min-1200px */
 @media only screen and (min-width: 1200px) {
   .fa-arrow-left {
-    left: -760px;
+    left: -440px;
   }
   .img-delice-des-sens,
   .img-la-francaise {
